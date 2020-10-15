@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	{% load static %}
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <title>Customers Record</title>
+  {% load static %}
+	<link rel="stylesheet" href="{% static '/style.css' %}"/>
+</head>
+<body>
+	<form method="POST" class="post-form" action="/update/{{customer.id}}">
+			{% csrf_token %}
+      {{form.as_p}}
+		<div class="container">
+	<br>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Update details</h3>
+    </div>
+  </div>
+
+                            
+  
+  <div class="form-group ">
+    <label class="col-sm-2 col-form-label">Ambulance Type:</label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" name="utype" id="id_utype" required maxlength="100" value="{{ customer.utype }}"/>
+        </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Customer Name:</label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" name="uname" id="id_uname" required maxlength="100" value="{{ customer.uname }}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Customer Email:</label>
+    <div class="col-sm-4">
+          <input type="email" class="form-control" name="uemail" id="id_uemail" required maxlength="254" value="{{ customer.uemail }}"/>
+    </div>
+  </div>
+
+  <div class="form-group ">
+    <label class="col-sm-2 col-form-label">Customer Contact:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="ucontact" id="id_ucontact" required maxlength="15" value="{{ customer.ucontact }}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Customer Location:</label>
+    <div class="col-sm-4">
+          <input type="text" class="form-control" name="ulocation" id="id_uemail" required maxlength="254" value="{{ customer.ulocation }}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Destination:</label>
+    <div class="col-sm-4">
+          <input type="text" class="form-control" name="udestination" id="id_uemail" required maxlength="254" value="{{ customer.udestination }}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Date:</label>
+    <div class="col-sm-4">
+          <input type="text" class="form-control" name="udate" id="id_uemail" required maxlength="254" value="{{ customer.udate }}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 col-form-label">Time:</label>
+    <div class="col-sm-4">
+          <input type="text" class="form-control" name="utime" id="id_uemail" required maxlength="254" value="{{ customer.utime }}"/>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+
+</div>
+</form>
+</body>
+</html>
+
+
+

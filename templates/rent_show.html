@@ -1,0 +1,95 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Blog</title>
+	<link rel="stylesheet" href='{%static "vendors/css/grid.css" %}'/>
+	
+</head>
+
+<body>
+	{% block body %}
+	<link rel="stylesheet" href="{%static 'resources/css/bootstrap.min.css'%}"/>
+	<div class="top">
+	<div class="container">
+	  <div class="row">
+	  	<div class="fh5co-box">
+			<h3 class="heading">Search</h3>
+				<form method="POST" action="">
+			  		{% csrf_token %}
+			  		<div class="form-group">
+			  			<input type="text" name="q" class="form-control" placeholder="Search" value="{{request.POST.q}}">
+			  		</div>
+			  	</form>
+		</div>
+		<table class="table table-stripped">
+		  <thead>
+		  	<tr>
+		  		<th>From</th>
+		  		<th>To</th>
+		  		<th>AC Rent</th>
+		  		<th>General Rent</th>
+		  		<th>ICU Rent</th>
+		  		<th>Action</th>
+		  	</tr>
+		  </thead>	
+		<tbody>
+		{% for p in post %}
+		<tr>
+		<td>{{ p.From }}</td>
+		<td>{{p.To}}</td>
+		<td>{{p.AC_Rent}}</td>
+		<td>{{p.General_Rent}}</td>
+		<td>{{p.ICU_Rent}}</td>
+		<td><a href="rent_update/{{p.id}}">Edit</a>|<a href="rent_delete/{{p.id}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+		</tbody>
+		</table>
+		
+	  </div>
+	</div>
+	</div>
+	
+	<div class="container">
+		
+		<div class="pagination">
+		<span class="step-links">
+		{% if post.has_previous %}
+		<ul class="pagination">
+		<a href="?page=1">&laquo; 1</a>
+		
+		<li class="page-item"><a class="page-link" href="?page=1">first</a></li>
+		<li class="page-item"><a class="page-link" href="?page={{ post.previous_page_number }}">Previous</a></li>
+		
+		<a href="?page={{ post.previous_page_number }}">previous</a>
+		{% endif %}
+		<span class="current">
+		
+		<li class="page-item"><a class="page-link" href="?page= ">{{ post.number }}</li> 
+		
+		</span>
+		{% if post.has_next %}
+		<a href="?page={{ post.next_page_number }}">next</a>
+		<a href="?page={{ post.paginator.num_pages }}">last &raquo;</a>
+		{% endif %}
+		</ul>
+		</span>
+		</div>
+
+		<ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+		<center><a href="/rent_post" class="btn btn-primary">Add New Record</a></center>
+
+	</div>
+	{% endblock %}
+</body>
+</html>

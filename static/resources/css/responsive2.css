@@ -1,0 +1,383 @@
+@media only screen and (max-width:1024px)
+{
+	html{
+		font-size: 57%;
+	}
+	.row{
+		margin:0 15px;
+	}
+	.menu{
+		display: ;
+	}
+	.ability_down p {
+	    margin-left: 2rem;
+	    margin-right: 2rem;
+	}
+	.hotel_reserve_box{
+		margin-left: 20rem;
+		width:62%;
+	}
+	.booking_form{
+		
+	}
+	form.post-form {
+    	margin-left: 9%;
+	}
+	.form-control{
+		width:50%;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 7rem;
+	    margin-top: 2rem;
+	}
+	.admin-right{
+		width:84%;
+	}
+}
+@media only screen and (max-width:980px){
+	.hotel_reserve_box{
+		margin-left: 20rem;
+	}
+	.form-control{
+		width:60%;
+	}
+	form.post-form {
+    	margin-left: 16%;
+	}
+	.form-group{
+		text-align:;
+		margin-bottom: 3rem;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 4rem;
+	    margin-top: 3rem;
+	    margin-bottom: 3rem;
+	}
+	.booking_form{
+
+	}
+	.booking_form.form-group{
+		margin-left: -300px;
+	}
+	.admin-right{
+		width:80%;
+	}
+
+}
+
+@media only screen and (max-width:768px)
+{
+	/*Mobile Menu*/
+	.logo{
+		margin-left: -40px;
+	}
+	.main_manu ul{
+		display:none;
+	}
+	.main_manu .mobilemenu span{
+		display:block;
+		margin-right: 25px;
+	}
+
+	.body{
+		
+	}
+	.span_1_of_3{
+		;
+	}
+	.col-md-4{
+		width: 100%;
+	}
+	.row{
+		margin:0 15px;
+	}
+	.menu{
+		display: none;
+	}
+	.slider_area{
+		
+	}
+	.ability_area{
+		padding: 15px;
+	}
+	.ability_top{
+		margin-bottom:30px;
+	}
+	.ability_down p{
+		margin-bottom: 25px;
+	}
+	.service-2{
+		padding:15px;
+	}
+	.pp{
+		margin-top:25px;
+	}
+	.service_area{
+		padding:20px;
+	}
+	.service_content{
+		margin-bottom:20px;
+	}
+	/*Single Sevice*/
+	.single_service {
+	    padding: 10px;
+	}
+	.col-md-3.section_down{
+		flex: 0 0 50%;
+		max-width:none;
+	}
+	.single_service img {
+	    width: 100%;
+	    padding: 20px;
+	}
+	.service_area {
+	    margin-top: -70px;
+	    margin-bottom: -75px;
+	}
+	/*End Single Service*/
+	/*i.fas.fa-align-left{
+	    text-align:center; 
+	    font-size: 100px;
+	}
+	i.fas.fa-align-center{
+	    text-align:center; 
+	    /*margin-left:150px;*/
+	    /*font-size: 100px;
+	}
+	i.fas.fa-align-right{
+	    text-align:center; 
+	    /*margin-left:150px;*/
+	    /*font-size: 100px;
+	}*/
+	.terms_area p{
+		padding:10px;
+	}
+	.borde{
+		padding: 20px;
+	}
+	/*.border-one{
+		width:100%;
+	}*/
+	.border-one{
+	    width: 65%;
+	    margin-left: 105px;
+	    margin-right: 20px;
+	}
+	.emergency{
+		padding: 20px;
+	}
+	.left,.right{
+		width:100%;
+	}
+	.hotel_reserve_box {
+	    
+	    box-shadow: 3px 5px 10px #7527b0;
+	    width: 76%;
+	    margin-left: auto;
+	    margin-left: 9rem;
+	    
+	}
+	.booking_form{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.booking_form.fixed_768 {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    box-shadow: none;
+	}
+	form.post-form {
+    	margin-left: 14%;
+    	margin-right: 14%;
+	}
+	.form-control{
+		width: 40%;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 4.6rem;
+	}
+	.admin-right{
+		width:76%;
+	}
+	.col-md-4 {
+    flex: none;
+    max-width:none;
+	}
+	.col-sm-4 {
+	    flex:none;
+		width: none;
+	    width: none;
+	}
+	.blog{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.blog h2{
+		font-size: 23px;
+	}
+	.col-md-1 {
+	    width: 85px;
+	    max-width: none;
+	}
+	.col-md-11 {
+	    float: right;
+	    width: 88%;
+	    margin-bottom: ;
+	    margin-top: -40px;
+	    margin-left: 40px;
+	}
+	iframe.map_768  {
+	    width: 670px;
+	}
+	/*Register*/
+	.login-column_768 {
+	    flex: none;
+	    max-width: 75%;
+	}
+	.form-group.register_768 {
+	    margin-right: -500px;
+	}
+
+}
+
+
+
+@media only screen and (max-width:480px)
+{
+	.span_1_of_4{
+		width:100%;
+	}
+	.main_manu ul li {
+	    float: none;
+	    border-bottom: 1px solid #ddd;
+	}
+	/*Mobile Menu*/
+	.logo {
+	    margin-left: -40px;
+	}
+	.main_manu .mobilemenu span {
+	    margin-top: -45px;
+	    margin-right: 30px;
+	}
+	/*End Mobile Menu*/
+	.box2{
+		width:100%;
+	}
+	/*Service Area*/
+	.section_content{
+		margin-bottom: 35px;
+	}
+	/*Single Service*/
+	.col-md-3.section_down{
+		flex: 0 0 100%;
+		max-width:none;
+	}
+	.single_service img{
+	    padding: 30px;
+	}
+	.single_service p{
+		padding:20px;
+	}
+	.service_area.single_service p{
+		line-height: 25px;
+	}
+	.section_double {
+	    margin-bottom: 0px;
+	}
+	/*End Single Service*/
+	.borde {
+	    margin-bottom: -85px;
+	}
+	.book h2.h-lg {
+	    margin-left: 0px;
+	    font-size:30px
+	}
+	.h-phone {
+	    margin-right: 45px;
+	}
+	.border-one{
+		width:90%;
+		margin-left: 20px;
+	}
+	i.fas.fa-align-center{
+	    text-align: center; 
+	    margin-left:0px;
+	}
+	.terms_area p{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.terms_area h2{
+		margin-top: 10px;
+	}
+	.ac_ambulance_area {
+	    padding: 30px;
+	}
+	.ambulance_content h3{
+		margin-top: -25px;
+	}
+	.image{
+		margin-top: 30px;
+	}
+	.hotel_reserve_box{
+		margin-left: 6rem;
+	}
+	.booking_form.fixed_480 {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    box-shadow: none;
+	}
+	form.post-form {
+	    margin-left: 6%;
+	    margin-right: 0%;
+    
+	}
+	.blog{
+		padding: 30px;
+	}
+	.blog h2{
+		font-size: 23px;
+		margin-top: -15px;
+	}
+	.blog h3{
+		font-size: 23px;
+		margin-top:-15px;
+	}
+	.col-md-1 {
+	    width: 85px;
+	}
+	.col-md-11{
+		float: right;
+	    width: 84%;
+	    margin-bottom: ;
+	    margin-top: -40px;
+	}
+	.col-md-6.map_margin {
+	    margin-left: 30px;
+	}
+	iframe.map_480 {
+	    width: 450px;
+	}
+	/*Rental list*/
+	.fh5co-box {
+	    margin-left: 20px;
+	}
+	.table_480 {
+	    width: 93%;
+	    margin-left: 10px;
+	}
+	.table{
+		width: none;
+	}
+	/*Register*/
+	.form-group.register_480 {
+	    margin-right: -370px;
+	}
+	.login-column_480 {
+	    max-width: 90%;
+	}
+
+}
+
+
+

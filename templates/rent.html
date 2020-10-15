@@ -1,0 +1,85 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Blog</title>
+	<link rel="stylesheet" href='{%static "vendors/css/grid.css" %}'/>
+	
+</head>
+
+<body>
+	{% block body %}
+	<div class="top fixed_all_page">
+	<div class="container">
+	  <div class="row">
+	  	<div class="fh5co-box">
+			<h3 class="heading">Search</h3>
+				<form method="POST" action="">
+			  		{% csrf_token %}
+			  		<div class="form-group">
+			  			<input type="text" name="q" class="form-control" placeholder="Search" value="{{request.POST.q}}">
+			  		</div>
+			  	</form>
+		</div>
+		<table class="table table-stripped table_480">
+		  <thead>
+		  	<tr>
+		  		<th>From</th>
+		  		<th>To</th>
+		  		<th>General Rent</th>
+		  		<th>Freezer Rent</th>
+		  		<th>ICU Rent</th>
+		  		
+		  	</tr>
+		  </thead>	
+		<tbody>
+		{% for p in post %}
+		<tr>
+		<td>{{ p.From }}</td>
+		<td>{{p.To}}</td>
+		<td>{{p.General_Rent}}</td>
+		<td>{{p.Freezer_Rent}}</td>
+		<td>{{p.ICU_Rent}}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+		</table>
+		
+	  </div>
+	</div>
+	</div>
+	
+	<div class="container">
+		
+		<div class="pagination">
+		<span class="step-links">
+		{% if post.has_previous %}
+		<a href="?page=1">&laquo; first</a>
+		<a href="?page={{ post.previous_page_number }}">previous</a>
+		{% endif %}
+		<span class="current">
+		Page {{ post.number }} of {{ post.paginator.num_pages }}.
+		</span>
+		{% if post.has_next %}
+		<a href="?page={{ post.next_page_number }}">next</a>
+		<a href="?page={{ post.paginator.num_pages }}">last &raquo;</a>
+		{% endif %}
+		</span>
+		</div>
+
+	</div>
+	{% endblock %}
+</body>
+</html>
+
+{% if post.id > first.id %}
+		<a href="{% url 'rent' id=post.id|add:-1 %}">Prev</a>
+		{% endif %}
+
+		{% if post.id < last.id %}
+		<a href="{% url 'rent' id=post.id|add:1 %}">Next</a>
+		{% endif %}

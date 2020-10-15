@@ -1,0 +1,175 @@
+@media only screen and (max-width:1024px)
+{
+	html{
+		font-size: 57%;
+	}
+	.row{
+		margin:0 15px;
+	}
+	.menu{
+		display: ;
+	}
+	.ability_down p {
+	    margin-left: 2rem;
+	    margin-right: 2rem;
+	}
+	.hotel_reserve_box{
+		margin-left: 20rem;
+		width:62%;
+	}
+	form.post-form {
+    	margin-left: 9%;
+	}
+	.form-control{
+		width:50%;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 7rem;
+	    margin-top: 2rem;
+	}
+	.admin-right{
+		width:84%;
+	}
+}
+@media only screen and (max-width:980px){
+	.hotel_reserve_box{
+		margin-left: 20rem;
+	}
+	.form-control{
+		width:60%;
+	}
+	form.post-form {
+    	margin-left: 16%;
+	}
+	.form-group{
+		text-align:;
+		margin-bottom: 3rem;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 4rem;
+	    margin-top: 3rem;
+	    margin-bottom: 3rem;
+	}
+	.admin-right{
+		width:80%;
+	}
+
+}
+@media only screen and (max-width:768px)
+{
+	.body{
+		
+	}
+	.row{
+		margin:0 15px;
+	}
+	.menu{
+		display: none;
+	}
+	.ability_area{
+		padding: 15px;
+	}
+	.ability_top{
+		margin-bottom:30px;
+	}
+	.ability_down p{
+		margin-bottom: 25px;
+	}
+	.service-2{
+		padding:15px;
+	}
+	.pp{
+		margin-top:25px;
+	}
+	.service_area{
+		padding:20px;
+	}
+	.service_content{
+		margin-bottom:20px;
+	}
+	/*i.fas.fa-align-left{
+	    text-align:center; 
+	    font-size: 100px;
+	}
+	i.fas.fa-align-center{
+	    text-align:center; 
+	    /*margin-left:150px;*/
+	    /*font-size: 100px;
+	}
+	i.fas.fa-align-right{
+	    text-align:center; 
+	    /*margin-left:150px;*/
+	    /*font-size: 100px;*/
+	}*/
+	.terms_area{
+		padding:40px;
+	}
+	.border{
+		padding: 20px;
+	}
+	.emergency{
+		padding: 20px;
+	}
+	.left,.right{
+		width:100%;
+	}
+	.hotel_reserve_box {
+	    
+	    box-shadow: 3px 5px 10px #7527b0;
+	    width: 76%;
+	    margin-left: auto;
+	    margin-left: 9rem;
+	    
+	}
+	form.post-form {
+    	margin-left: 18%;
+	}
+	.form-control{
+		width: 40%;
+	}
+	.hotel_reserve_box.btn{
+		margin-left: 4.6rem;
+	}
+	.admin-right{
+		width:76%;
+	}
+}
+
+@media only screen and (max-width:480px){
+	.span_1_of_4{
+		width:100%;
+	}
+	.box2{
+		width:100%;
+	}
+	.single_slider{
+		
+	}
+	.service_area.section_content{
+		margin-bottom: 35px;
+	}
+	.service_area.single_service img{
+	    padding: 15px;
+	}
+	.service_area.single_service p{
+		line-height: 25px;
+	}
+	.border-one{
+		width:100%;
+	}
+	i.fas.fa-align-center{
+	    text-align: center; 
+	    margin-left:0px;
+	}
+	.terms_area p{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.image{
+		margin-top: 30px;
+	}
+	
+}
+
+
+

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <body>
+  	{% block body%}
+    <!--<div class="ac">
+      <div class="container">
+	    <div class="row">
+		  <div class="col span_1_of_2 left">
+			<div class="decorate">
+		    <h3>{{post.title}}</h3>
+			<p><!Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance Unique ambulance serves different types of ambulance.There are four types of ambulance in Unique Ambulance services and they are AC
+			ambulance--{{post.content}}</p>
+		    <img width="520px"src="{{post.image.url}}"/>
+			</div>
+		  </div>
+		  
+		  <div class="col span_1_of_2 right">
+		   <div class="decorate">
+		    <h4>Recent Info</h4>
+			<ul>
+			  <li><a href="/ac">AC Ambulance</a></li>
+			  <li><a href="/emp">Booking Ambulance</a></li>
+			  <li><a href="ac.html">Booking Ambulance</a></li>
+			  <li><a href="ac.html">Booking Ambulance</a></li>
+			  <li><a href="ac.html">Booking Ambulance</a></li>
+			</ul>
+		   </div>
+		  </div>
+		  
+	    </div>
+	  </div>
+	</div>-->
+	<!--SLIDER AREA START-->
+		<div class="slider_area">
+			<div class="slider owl-carousel">
+				{% for post in post2 %}
+				<div class="single_slider" style="background-image:url('{{post.image.url}}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">                   
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	<!--SLIDER AREA END-->
+	<div class="ac_ambulance_area pb-50 pt-70">
+      <div class="container">
+	    <div class="row">
+		  <div class="col-md-6 col-sm-6">
+			<div class="ambulance_content">
+				<h3>{{post.title}}</h3>
+				<p>{{post.content}}</p>
+			</div>
+		  </div>
+			<div class="col-md-6 col-sm-6">
+				<div class="ambulance_content_img">
+					<img src="{{post.image.url}}"/>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="emergency_content">
+					<a class="btn btn-border btn-invert border_btn" href="tel:01710070011" style="cursor: pointer;"><span>Book Now</span></a>
+				</div>
+			</div>
+	    </div>
+	  </div>
+	</div>
+	{% endblock %}
+  </body>
+</html>

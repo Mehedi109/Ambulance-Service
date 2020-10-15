@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Page</title>
+	</head>
+	<body>
+		{% block body %}
+		<div class="container">
+			<div class="map">
+				<div class="row">
+					<div class="col-md-8">
+						<iframe class="map_768 map_480" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57903.12952419021!2d91.82596202600838!3d24.899837317278365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375054cc3abd02f9%3A0x9ac793f52e45b85a!2sMira%20Bazar%2C%20Sylhet!5e0!3m2!1sen!2sbd!4v1600535763451!5m2!1sen!2sbd" width="" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="contact">
+			<div class="row">
+				<div class="col-md-6 map_margin">
+					<h2 style="margin-top:30px;">Contact</h2>
+					<a class="btn btn-primary" href="tel:01710070011" style="padding:15px;padding-left:45px;padding-right:45px;font-size:15px;font-weight:bold;margin-top:25px;float:left">Call Now</a>
+					<p style="margin-top:25px;font-size:15px;margin-top: 114px;margin-left: 25px;">01781-580011</p>
+				</div>
+				<div class="col-md-6 map_margin">
+					<h2 style="margin-top:30px">Address</h2>
+					<a class="btn btn-primary" style="color:#fff;float:none;padding:15px;padding-left:45px;padding-right:45px;font-size:15px;font-weight:bold;margin-top:25px;">Get Directions</a>
+					<p style="margin-top:25px;font-size:15px">20/5 Roshid Plaza,Mirabazar</p>
+					<p>Sylhet-3300</p>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+  		{% endblock %}
+	</body>
+</html>

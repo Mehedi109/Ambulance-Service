@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href='{%static "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" %}'/>
+	    <link rel="stylesheet" type="text/css" href='{%static "resources/css/fontawesome-all.min.css" media="all"%}' />
+	    <script src='{%static "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" %}'></script>
+	    <script src='{%static "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" %}'></script>
+	    <script src='{%static "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" %}'></script>
+		<title>Customers Record</title>
+		<link rel="stylesheet" href="{%static 'resources/css/bootstrap.min.css'%}"/>
+		<link rel="stylesheet" href="{% static 'resources/css/style.css' %}"/>
+	</head>
+	<body>
+	
+	{% if request.user.is_staff or request.user.is_superuser%}	
+		<div class="admin_book">
+		<div class="head_top">
+			<div class="container-fluid no_padding">
+				<div class="head_left">
+					<p>Admin panel</p>
+				</div>
+				<div class="admin_sidebar_menu">
+					<div class="menu text-left">
+						<ul>
+							<li><a href="/author_book"><i class="fa fa-clone" aria-hidden="true"></i>Booking </a></li>
+							<li><a href="/author_blog"><i class="far fa-user"></i>Blog Details</a></li>
+							<li><a href="/author_rent"><i class="fab fa-accusoft"></i>Rent Details</a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		<div class="admin_area">
+			<div class="container-fluid no_padding">
+				<div class="head_right" style="padding:22px">
+					<!-- Navbar-->
+					
+				</div>
+
+			</div>
+			</div>
+			</div>
+			<div class="admin-right" style="float:right;width:85%">
+			<div class="col-md-12">
+			{% block admin%}
+
+			{% endblock %}
+			</div>
+			</div>
+			
+						
+			<!--<h1>You are not authorized to access this page</h1>-->
+				
+			{%else%}
+			
+			
+				{% if messages %}
+			        <div class="messages" style="width:70%;margin-left:180px;padding-top:2.5rem">
+			        {% for message in messages %}
+			            <center><div {% if message.tags %} class="{{message.tags}}"{% endif %} style="padding: 8rem;margin-top:4rem;font-size:3rem;color: red;font-family: sans-serif;">{{message}}</div></center>
+			            {% endfor %}
+			         </div>
+			    {% endif %}
+			
+					<div class="messages" style="width:70%;margin-left:180px;padding-top:2.5rem">
+			     
+			            <center><div class="message2" style="padding: 8rem;margin-top:4rem;font-size:3rem;color:red;font-family:;background:#FFF3CD">Sorry,you are not authorized to access this page</div></center>
+			            
+			         </div>
+			       
+			{% endif %}
+			
+			    
+      <!-- LinkUp Js -->
+      <script type="text/javascript" src="static/assets/js/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="static/assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="static/assets/js/active.js"></script>
+   </body>
+</html>

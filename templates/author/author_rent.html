@@ -1,0 +1,59 @@
+{% extends 'show.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Blog</title>
+	
+	<link rel="stylesheet" href="{% static '/style.css' %}"/>
+	
+</head>
+
+<body>
+	{% block admin %}
+	<div class="top">
+	<div class="container">
+	 <!--<div class="row">--> 
+	  	<div class="fh5co-box">
+			<h3 class="heading">Search</h3>
+				<form method="POST" action="">
+			  		{% csrf_token %}
+			  		<div class="form-group">
+			  			<input type="text" name="q" class="form-control" placeholder="Search" value="{{request.POST.q}}">
+			  		</div>
+			  	</form>
+		</div>
+		<a href="/rent_post" class="btn btn-primary admin-btn">Add new article</a>
+		<table class="table table-stripped">
+		  <thead>
+		  	<tr>
+		  		<th>From</th>
+		  		<th>To</th>
+		  		<th>General Rent</th>
+		  		<th>Freezer Rent</th>
+		  		<th>ICU Rent</th>
+		  		<th>Action</th>
+		  	</tr>
+		  </thead>	
+		<tbody>
+		{% for p in post %}
+		<tr>
+		<td>{{ p.From }}</td>
+		<td>{{p.To}}</td>
+		<td>{{p.General_Rent}}</td>
+		<td>{{p.Freezer_Rent}}</td>
+		<td>{{p.ICU_Rent}}</td>
+		<td><a href="rent_update/{{p.id}}">Edit</a>|<a href="rent_delete/{{p.id}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+		</tbody>
+		</table>
+		
+	  <!--</div>-->
+	</div>
+	</div>
+
+	{% endblock %}
+</body>
+</html>

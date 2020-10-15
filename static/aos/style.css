@@ -1,0 +1,38 @@
+body{
+	width:400px;
+}
+.simbox{
+	height:100px;
+	text-align:center;
+	margin:25px 0px;
+}
+.simbox:nth-child(1){
+	background-color:#222;
+}
+.simbox:nth-child(2){
+	background-color:#ccc;
+}
+.simbox:nth-child(3){
+	background-color:#ddd;
+}
+.simbox:nth-child(4)
+	background-color:orrange;
+}
+.simbox:nth-child(5){
+	background-color:#222;
+}
+.simbox:nth-child(5){
+	background-color:#222;
+}
+.simbox:nth-child(10){
+	background-color:#222;
+}
+.simbox:nth-child(7){
+	background-color:#222;
+}
+.simbox:nth-child(8){
+	background-color:red;
+}
+.simbox:nth-child(9){
+	background-color:yellow;
+}

@@ -1,0 +1,38 @@
+
+{%extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	
+	<!--<link rel="stylesheet" href='{%static "vendors/css/grid.css" %}'/>-->
+	<!--<link href='{%static "resources/css/bootstrap.min.css"%}' rel="stylesheet">-->
+</head>
+
+<body>
+	{% block body%}
+	<div class="top fixed_all_page">
+	<div class="container">
+	  <div class="row">
+		<div class="blog">
+		{% for p in post %}
+		<h2 style="margin-bottom:-6px">{{p.title}}</h2>
+			<p style="margin-bottom:10px">{{p.Category}} | {{p.posted_on}} </p>
+			<!--<hr>-->
+			
+			<!--<hr>-->
+		
+			<p style="margin-right:0px;margin-left:0px;margin-top:-10px">{{p.body|safe|truncatewords:"50"|linebreaks}}</p>
+			<figure style="margin-bottom:30px;margin-top:-10px">
+				<a href="{% url 'single_blog' id=p.id %}">Read More</a><br><br><hr>
+			</figure>	 
+		{% endfor %}
+		</div>
+	  </div>
+	</div>
+	</div>
+	{% endblock %}
+</body>
+</html>
+

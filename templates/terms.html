@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <body>
+  	{% block body %}
+	    <div class="slider_area">
+			<div class="slider owl-carousel">
+				{% for post in post2 %}
+				<div class="single_slider" style="background-image:url('{{post.image.url}}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">                   
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	<!--SLIDER AREA END-->
+	<div class="terms_area pb-50">
+	  <div class="container" data-aos="fade-down" data-aos-duration="2000">
+	      {% for quote in quote %}
+		  <h2>{{quote.title}}</h2>
+		  <p>{{quote.quote}}</p>
+	      <p>{{quote.quote}}</p>
+	      <p>{{quote.quote}}</p>
+	      <p>{{quote.quote}}</p>
+		  {% endfor %}
+	  </div>
+	</div>
+	<!--</div>-->
+	{% endblock %}
+  </body>
+</html>

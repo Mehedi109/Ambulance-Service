@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Register</title>
+    <link href='{%static "resources/css/bootstrap.min.css"%}' rel="stylesheet" id="bootstrap-css"/>
+    <!------ Include the above in your HEAD tag ---------->
+    <!-- Bootstrap JS -->
+    <script src='{%static "resources/js/bootstrap.min.js"%}'></script>
+    <!-- library function -->
+    <script  src='{%static "resources/js/jquery.js"%}'></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="static/resources/css/style.css" />
+  </head>
+
+  <body>
+  	
+  	<form action="register" method="POST">
+  		{% csrf_token %}
+  		<!--<input type="text" name="first_name" placeholder="First Name"><br>
+  		<input type="text" name="last_name" placeholder="Last Name"><br>
+  		<input type="text" name="username" placeholder="User Name"><br>
+  		<input type="email" name="email" placeholder="Email"><br>
+  		<input type="password" name="password" placeholder="Password"><br>
+  		<input type="password" name="password2" placeholder="Confirm Password"><br>
+  		<input type="submit" value="Submit">-->
+      <div class="register">
+      <div id="login">
+        <h3 class="text_center text-white pt-5">Registration form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="register.html" method="post">
+                            <h3 class="text-center text-info">Registration</h3>
+                            <div class="form-group">
+                                <label for="first_name" class="text-info">First Name:</label><br>
+                                <input type="text" name="first_name" id="first_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name" class="text-info">Last Name:</label><br>
+                                <input type="text" name="last_name" id="last_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="text-info">User Name:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Email:</label><br>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password2" class="text-info">Confirm Password:</label><br>
+                                <input type="password" name="password2" id="password2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  	</form>
+
+    <div>
+      {% for message in messages %}
+      <center><h3>{{ message }}</h3></center>
+      {% endfor %}
+    </div>  
+
+  </body>
+</html>

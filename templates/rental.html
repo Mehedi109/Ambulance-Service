@@ -1,0 +1,36 @@
+
+{% load static %}
+<html>
+<head>
+	<title>Index</title>
+	{% load static %}
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href='{%static "resources/css/bootstrap.min.css"%}'>
+  	<title>Rental Record</title>
+	<link rel="stylesheet" href="{% static 'resource/css/style.css' %}"/>
+</head>
+{% block body %}
+<!--<link href='{% static "resources/css/bootstrap.min.css"%}' rel="stylesheet"/>-->
+<body>
+<form method="POST" action="" style="margin-top:30px;padding:10px;margin-left:">
+<div class="container">
+ <div class="form-group row ">
+ 	<label class="col-sm-2 col-form-label">
+ 		
+    {% csrf_token %}
+	 {{form.as_p}}
+    <center><button class="btn btn-primary">Submit</button></center>
+    </label>
+ </div>
+</div>
+</form>
+</body>
+{% endblock %}
+
+
+</html>

@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html>
+<body style=""> 
+	{% block top_bar %}
+
+	<!-- header_top start -->	
+	<!--<header class="header_top text_center">		
+		<div class="container">
+			<div class="row">
+				<div class="col span_12_of_12">
+					<div class="start">				
+						<h4><i class="fas fa-ambulance"></i>UNIQUE AMBULANCE SERVICE</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>-->
+	<!-- menu_bar  start -->
+
+	{% endblock %}
+	
+	{% block body %}
+    <!--SLIDER AREA-->
+	<!--<div class="col span_12_of_12 slider-wrapper theme-light js--slider--section">
+		
+		<div id="slider" class="nivo-slider">
+		{% for post in slider_post %}
+			<img src="{{post.image.url}}"/>		    
+		{% endfor %}
+		</div>
+		
+	</div>-->
+
+	<!--slider_area start -->
+		<div class="slider_area fixed_all_page">
+			<div class="slider owl-carousel">
+				{% for post in slider_post %}
+				<div class="single_slider" style="background-image:url('{{post.image.url}}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">                   
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<!--slider_area end -->
+		
+	
+	<!-- ability  start-->
+		<div class="ability_area pb-50 pt-70" style="color:">
+			<div class="container">		
+				<div class="row">
+					<div class="col span_12_of_12">
+						<!--<div class="ability_top">-->
+						<div class="section_content"><!--ka-->
+							<h2>{{post3.title}}</h2>
+							<p>{{post3.subtitle}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% for post in ability_bottom_post %}
+					<div class="col-md-4">
+						<div class="ability_down">
+
+						<i class="fas fa-align-left"></i>
+						<p>{{post.content}}</p>
+						
+						</div>
+					</div>
+
+					{% endfor %}
+				</div>
+				<!--2Ambulance in 30 minutes.We provide ambulance service 30 minutes at any place in Sylhet.Each of our ambulances has wheelchairs,oxygen and stretchar system.-->
+
+				<!--3Pleasant atmosphere.There is a good arrangement for the patient in our ambulance.Each of our ambulances, including a healthy bed for the patient,has good wheelchairs,oxygen and stretchar system.-->	
+			</div>
+		</div>
+		
+		<!--<div class="service clearfix" style="background:#7C8E55;margin-top:-25px;overflow:hidden">
+		  <div class="row">
+		    <div class="container">
+		    <h2>Our Services</h2>
+			<p>lorem ipsum doller lorem ipsum doller lorem ipsum doller  lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller
+			lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller
+			lorem ipsum doller lorem ipsum doller lorem ipsum doller v vlorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller 
+			lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller lorem ipsum doller vlorem ipsum doller</p>
+		    </div>
+		  </div>
+		</div>-->
+		
+		<!--<section class="service-2 s-descript">-->
+		<div class="ambulance_area pb-50 pt-70"><!--ka-->
+		<div class="container">
+		  <div class="row">
+		  	<div class="col-xl-12 col-md-12 col-sm-12"><!--ka-->
+		  		<div class="section_content"><!--ka-->
+				  	{% for post in post%}
+					<h2>{{ post.title }}</h2>
+				    <!--<h3>Our Public Service is here</h3>-->
+					<p>{{ post.subtitle }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="row">
+		  	{% for content in content%}
+		  	<div class="col-lg-4 col-xs-12 text-center">
+		    <div class="pp box ">
+			  <!--<img src="projectimg/favicon.png"/>-->
+			  <div class=" pp1">
+			    <i class="fas fa-ambulance"></i>
+			  </div>
+			  <div class="  pp2">
+			  <div class="box-title">
+			  <h3>{{content.servicetitle}}</h3>
+			  </div>
+			  <div class="box-text">
+			  <span>{{ content.content }}</span>
+			  </div>
+							
+			  </div>
+			</div>
+
+			<!-- 2.-->
+
+			<!-- 3.-->
+			
+			</div>
+			{% endfor %}
+		  </div> 
+		</div>
+		</div>
+		<!-- service_area start-->
+		<div class="service_area pt-50 pb-70">
+			<div class="container">
+
+				<div class="row">
+					{% for s_a_c in s_a_c%}	
+					<div class="col span_12_of_12"> <!--<col-md-12>-->
+						<div class="section_content section_double">
+							<h2>{{s_a_c.title}}</h2>      
+							<p>{{s_a_c.short_desc}}</p>
+						</div>
+					</div>
+					{%endfor%}
+					
+				</div>
+				<div class="row">	
+				 	{% for post in sab %}			
+					<div class="col-md-3 section_down">
+						<div class="single_service">
+							<img src="{{post.image.url}}" />
+							<h4>{{post.title}}</h4>
+							<p>{{post.content}}</p>
+						</div>
+					</div>
+					{% endfor %}			
+					<!--<div class="col span_1_of_4">
+		
+						<div class="single_service">
+							<img src="static/projectimg/oxygencylindera.png"/>
+							<h4>OXYGEN DETAILS</h4>
+							<p>Unique Ambulance is loaded with oxygen at all time flower press in our ambulance.Sometimes if patient takes oxygen 
+							or is needed,
+							the oxygen is totally free</p>
+						</div>
+					</div>					
+					<div class="col span_1_of_4">
+						<div class="single_service">
+							<img width="300px" src="static/projectimg/strecher-1.jpg"/>
+							<h4>STRETCHER DETAILS</h4>
+							<p>Unique Ambulance Strechers are up to 6 “inch foam of the development, which is the original horizontal stretch from Japan. 
+							We always keep the strainer clean with sevlon. </p>
+						</div>
+					</div>				
+					<div class="col span_1_of_4">
+						<div class="single_service">
+							<img src="static/projectimg/seat.png"/>
+							<h4>SITTING SEAT DETAILS</h4>
+							<p>Sir, you will have to travel a long way with the patient or the body. In that case, it is difficult to sit in your sitting seat so that
+							we are setting up a quality sitting room.</p>
+						</div>
+					</div>
+				</div>-->
+			</div>	
+		</div>
+		</div>
+		<!-- service_area end-->
+		
+<!--TERMS AND CONDITION-->		
+<!--<div class="terms" >-->
+
+<!--TERMS AND CONDITION END-->
+
+  <div class="container">
+    <div class="borde">
+      <div class="borde-top" >
+	    <h2>{{post2.title}}</h2>
+	    <p>{{post2.subtitle}}</p>
+	  </div>
+
+	  <div class="borde-bottom">
+	  	<div class="row">
+	  	{%for post in border_bottom_post%}
+        <div class="col-md-4" data-aos="fade-right-up-left" data-aos-duration="1000">
+          <div class="border-one">
+            <i class="fa fa-clone" aria-hidden="true"></i>
+	          <h5>{{post.title}}</h5> 
+			  <p>{{post.content}}</p>			
+		  </div>
+		</div>
+		{%endfor%}
+		</div>
+	  </div>
+	</div>
+	 
+  </div>
+  
+
+  <!--<div class="emergency">-->
+
+  <div class="emergency_area pb-50 pt-70">
+  	<div class="container">
+  		<div class="row">
+  		<div class="col-md-7">	
+  		<div class="text-appointment">
+  		<div class="col span_1_of_2">
+		    <div class="book" data-aos="fade-right" data-aos-duration="1000">
+		    	<h2 class="h-lg">{{post4.h2_title}} <span class="color">{{post4.span_title}} </span>{{post4.last_title}}</h2>
+		    	<p class="info">{{post4.desc}}</p>
+		    	<h2 class="h-phone">{{post4.phone}}</h2>
+					<div class="emergency_content">
+						<a class="btn btn-border btn-invert border_btn" href="tel:01710070011"><span>Call Us Now</span></a>
+					</div>
+		    </div>
+		</div>
+		</div>
+	    </div>
+	    <div class="col span_1_of_2">
+	    	<div class="image" data-aos="fade-left" data-aos-duration="1000">
+	    		<img src="{{post4.image.url}}" />
+	    	</div>
+	    </div>
+	    </div>
+	</div>
+  </div>
+		
+<!--STICKY PART CODE-->
+				
+{% endblock %}	
+</body> 
+</html>
