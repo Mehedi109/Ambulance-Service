@@ -6,6 +6,7 @@ FOR USER'S LOGIN:
 
 
 FOR ADMIN'S LOGIN:
+
 url : localhost:8000/accounts/login
 
   username = mehedi
