@@ -5,6 +5,7 @@ FOR USER'S LOGIN
 
 
 FOR ADMIN'S LOGIN
+
   username = mehedi
   
   password = djangomehedi
