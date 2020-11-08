@@ -1,8 +1,6 @@
 FOR USER'S LOGIN 
 
-  username = mehedi
-  
-password = mehedi123
+  username = mehedi    password = mehedi123
 
 
 FOR ADMIN'S LOGIN
