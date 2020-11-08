@@ -13,4 +13,4 @@ url : localhost:8000/accounts/login
   
 password = djangomehedi
 
-Url of the admin page:localhost:8000/author
+Url of the admin panel:localhost:8000/author
