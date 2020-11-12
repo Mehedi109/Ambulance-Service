@@ -2,7 +2,7 @@ FOR USER'S LOGIN:
 
   username = mehedi    
   
-  password = mehedi123
+  password = djangomehedi
 
 
 FOR ADMIN'S LOGIN:
