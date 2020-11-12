@@ -1,8 +1,8 @@
 FOR USER'S LOGIN: 
 
-  username = mehedi    
+  username = Mehedi20    
   
-  password = djangomehedi
+  password = mh20
 
 
 FOR ADMIN'S LOGIN:
